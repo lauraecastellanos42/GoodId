@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="bg-white-100 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <img class="h-26 w-60 mr-2 object-cover" src="./images/BuenaIdea.PNG" alt="Menu Icon" >
+            <nav class="flex justify-center space-x-4">
+                <a href="login.html" class="font-bo px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Ingresar</a>
+                <a href="side-bar.html" class="font-bo px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Inicio</a>
+              </nav>
+        </div>
+    </header>
+    <div class="max-w-screen-md mx-auto bg-white rounded-lg shadow-md p-4">
+        <h2 class="text-2xl font-bo mb-4 flex justify-center">Genera un nuevo producto </h2>
+        <label for="ProductType" class="block text-gray-600 font-semibold mb-2 mt-4">Tipo de producto</label>
+                <input type="text" id="producto" name="producto" list="products" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+                <datalist id="products">
+                    <option value="camiseta"></option>
+                </datalist>
+        <form>
+            <div id="DescribeProduct">
+                <div class="mb-4">
+                    <label for="comment" class="block text-gray-600 font-semibold mb-2">Describe el producto que deseas obtener</label>
+                    <textarea id="comment" name="comment" rows="4" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500"></textarea>
+                </div>
+            </div>
+            <legend>Seleccione a continuación la categoría de su producto: </legend>
+            <div>
+                <!-- <input type="checkbox" id="coding" name="interest" value="coding" />
+                <label for="coding">Coding</label>
+                 -->
+                <table class="table-fixed w-full text-gray-600 font-light text-left mt-4">
+                    <tbody">
+                        <tr>
+                            <!-- primera fila -->
+                            <th >
+                                <label >
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">animales</span>
+                                </label>
+                            </th>
+                            <th >
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">astronautas</span>
+                                </label>
+                            </th> 
+                            <th >
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">deportes</span>
+                                </label>
+                            </th> 
+                            <th >
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">super heroes</span>
+                                </label>
+                            </th> 
+                            <th >
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">rostros</span>
+                                </label>
+                            </th> 
+                        </tr>
+                        <tr>
+                            <!-- segunda fila -->
+                            <th>
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">arte</span>
+                                </label>
+                            </th>
+                            <th >
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">futurista</span>
+                                </label>
+                            </th> 
+                            <th >
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">simpsons</span>
+                                </label>
+                            </th> 
+                            <th >
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">música</span>
+                                </label>
+                            </th> 
+                            <th >
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">cine</span>
+                                </label>
+                            </th> 
+                        </tr>
+                        <tr>
+                            <!-- tercera fila -->
+                            <th>
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">esqueleto</span>
+                                </label>
+                            </th>
+                            <th >
+                                <label class=" items-center">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">mar</span>
+                                </label>
+                            </th> 
+                            <th >
+                                <label>
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">espacio</span>
+                                </label>
+                            </th> 
+                            <th >
+                                <label class=" items-center">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">Juegos</span>
+                                </label>
+                            </th> 
+                            <th >
+                                <label class=" items-center">
+                                    <input type="checkbox" class="form-checkbox h-4 w-4">
+                                    <span class="ml-4 font-normal">minimalista</span>
+                                </label>
+                            </th> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table class="table-auto w-full text-gray-600  mt-4">
+                <tbody class="font-light text-center">
+                    <tr>
+                        <th class="px-4 py-2"><button type="button" onclick="showTextArea()" class=" bg-[#09090b] text-white py-2 px-4 rounded-md hover:bg-[#ff0b69] focus:outline-none">Creación libre</button></th> 
+                        <th class="px-4 py-2"><button type="submit" class=" bg-[#09090b] text-white py-2 px-4 rounded-md hover:bg-[#ff0b69] focus:outline-none">Creación Guiada</button></th> 
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>    
+</body>
